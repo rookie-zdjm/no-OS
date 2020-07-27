@@ -216,13 +216,13 @@ int main(void)
 	if (status < 0)
 		return status;
 
-	status = iio_register(iio_desc, &iio_demo_dev_descriptor,
-			      demo_device_input, iio_demo_in_desc);
+	status = iio_register(iio_desc, &iio_demo_dev_out_descriptor,
+			      demo_device_output, iio_demo_out_desc);
 	if (status < 0)
 		return status;
 
-	status = iio_register(iio_desc, &iio_demo_dev_descriptor,
-			      demo_device_output, iio_demo_out_desc);
+	status = iio_register(iio_desc, &iio_demo_dev_in_descriptor,
+			      demo_device_input, iio_demo_in_desc);
 	if (status < 0)
 		return status;
 
